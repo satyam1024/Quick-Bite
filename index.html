@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Bite</title>
+
+    <!-- custom style sheets -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/mediaQueries.css">
+    <link rel="stylesheet" href="styles/swiper-bundle.min.css">
+
+    <!-- link to add favicon -->
+    <link rel="icon" href="images/logo.webp" type="image/png">
+
+    <!-- font awesome icons script -->
+    <script src="https://kit.fontawesome.com/c732ec9339.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- nav bar -->
+        <div class="nav-bar">
+            <div class="logo">
+                <img src="images/logo.webp" alt="logo" height="25px" width="25px">
+                <a href="">Quick Bite</a>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="link active">home</a>
+                <a href="#services" class="link">services</a>
+                <a href="#about" class="link">about</a>
+                <a href="#products" class="link">products</a>
+                <a href="#reviews" class="link">reviews</a>
+                <a href="#contact" class="link">contact</a>
+            </div>
+            <div class="icons">
+                <div class="icon">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </div>
+                <div class="icon">
+                    <span class="i"><i class="fa fa-shopping-cart cart-icon" aria-hidden="true"></i> <span
+                            class="no-of-cart-items">0</span></span>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-bars menu" aria-hidden="true" onclick="controlMenu()"></i>
+                </div>
+                <div class="icon dark-mode-toggle" onclick="toggleDarkMode()">
+                    <i class="fa fa-moon" aria-hidden="true" id="dark-mode-icon"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart -->
+        <div class="cart">
+            <i class="fa fa-times close-cart" aria-hidden="true"></i>
+            <h1>Your Cart</h1>
+
+            <div class="no-empty-cart">
+                <ul class="cart-list-items">
+                </ul>
+                <div>
+                    <div class="total">Sub Total: <span class="sub-total">$0</span></div>
+                    <button>Check out</button>
+                </div>
+
+            </div>
+
+            <div class="empty-cart active">
+                <p>No items in the cart!</p>
+            </div>
+
+        </div>
+
+        <!-- Hero -->
+        <section class="home" id="home">
+            <!-- <img src="./images/design1.png" class="design1">
+            <img src="./images/design2.png" class="design2">
+            <img src="./images/design1.png" class="design3"> -->
+            <div class="text">
+                <h1>Bite into Flavor, Anytime, Anywhere!</h1>
+                <h4>Welcome to the ultimate feast, where the world of delicious fast food comes alive! Get ready to embark on
+                    a mouthwatering journey through a virtual paradise of pizza, burgers, and more. Whether you’re craving a cozy in-store
+                    meal, delivery to your doorstep, or a custom catering experience at your next event, we’re here to
+                    serve you the tastiest moments, wherever you are.</h4>
+            </div>
+            
+            <div class="image">
+                <img src="images/slice.png" alt="">
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="services" id="services">
+    <h1>What <span>we do?</span></h1>
+    <div class="services-card-wrapper">
+        <div class="service-card">
+            <div>
+                <h2>Dine-In</h2>
+                <h3>Chill With Us – Enjoy In-Store</h3>
+                <img src="./images/dinein.jpg" height="150px" width="200px">
+                <p>Whether you're enjoying a family meal, a casual hangout, or a quick bite, our dine-in experience is the perfect way to savor handcrafted pizzas, burgers, fries, and more.</p>
+                <button>Find the nearest store to you <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
+        </div>
+        <div class="service-card">
+            <div>
+                <h2>Island-Wide Delivery</h2>
+                <h3>Fast Food On the Go – Delivered to Your Door</h3>
+                <img src="./images/delivery-man.png" height="150px" width="150px">
+                <p>Whether it’s a late-night craving or a treat for someone special, we’ll bring hot, fresh meals straight to your doorstep – fast, fresh, and delicious.</p>
+                <button>Enter your address <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
+        </div>
+        <div class="service-card">
+            <div>
+                <h2>Catering</h2>
+                <h3>Spice Up Your Event – Fast Food Catering</h3>
+                <img src="./images/server.jpg" height="150px" width="150px">
+                <p>Whether it's a birthday party, wedding, corporate event, or any celebration, we provide custom pizza bars, burger stations, or full-service catering to keep your guests satisfied.</p>
+                <button>Tell us about your event <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!-- About -->
+        <section class="about" id="about">
+            <h1><span>About</span> Us</h1>
+            <div class="box-container about-box">
+                <!-- <div class="box image">
+                    <img src="images/about.png" alt="">
+                </div> -->
+                <div class="box text">
+                    <h2>Satisfy Your Cravings With Our Delicious Creations!</h2>
+                    <p>Welcome to your ultimate destination for mouthwatering fast food. here, we believe that great food brings people together. From handcrafted pizzas topped with the freshest ingredients to juicy burgers and crispy fries, every item on our menu is made with love and passion for flavor. Our journey started with a simple goal: to serve high-quality, delicious meals that hit the spot every time. Whether you're dining in, getting food delivered to your doorstep, or hosting a special event, we’re here to serve up smiles and satisfaction with every bite. Join us for a feast and experience the joy of fast food, done right.</p>
+                    <ul>
+                        <li>
+                            <div class="feature-icon"><i class="fa fa-list-alt" aria-hidden="true"></i></div>
+                            <span><span>Variety of Flavors</span> with our selection of <span>Pizzas</span>, <span>Burgers</span>, and <span>More</span> for both <span>Dine-in</span> and <span>Take-out</span> options</span>
+                        </li>
+                        <li>
+                            <div class="feature-icon"><i class="fa fa-handshake-o" aria-hidden="true"></i></div>
+                            <span>Prepared under <span>strict hygiene</span> and <span>food safety</span> standards</span>
+                        </li>
+                        <li>
+                            <div class="feature-icon"><i class="fa fa-snowflake-o" aria-hidden="true"></i></div>
+                            <span><span>Top-quality ingredients</span> sourced from both local and globally recognized suppliers</span>
+                        </li>
+                        <li>
+                            <div class="feature-icon"><i class="fa fa-smile-o" aria-hidden="true"></i></div>
+                            <span>A welcoming space for families, offering a fun and <span>friendly atmosphere</span> for all ages</span>
+                        </li>
+                        
+                    </ul>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Products -->
+        <section class="products" id="products">
+            <h1>Our <span>Products</span></h1>
+            <div class="categories-wrapper">
+                <!-- <button class="active" id="all">All</button> -->
+            </div>
+            <div class="box-container products-box">
+            </div>
+        </section>
+
+        <!-- reviews -->
+        <section class="reviews" id="reviews">
+            <h1>Top <span>Reviews</span></h1>
+
+            <div class="swiper reviews-box">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide box">
+                        <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                        <div class="top">
+                            <img src="images/reveiwer1.jpg" alt="">
+                            <div class="right">
+                                <div class="name"><span>Tom Stepher</span> <br> <small>Verfied Customer</small></div>
+                                <div class="stars">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text">I had an amazing experience! The variety of flavors offered was impressive, 
+                            and each dish was bursting with flavor. The staff were friendly and attentive, making sure our 
+                            dining experience was top-notch.I can’t wait to come back for more!</div>
+
+                    </div>
+                    <div class="swiper-slide box">
+                        <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                        <div class="top">
+                            <img src="images/reveiwer4.webp" alt="">
+                            <div class="right">
+                                <div class="name"><span>Oliviya Lee</span> <br> <small>Verfied Customer</small></div>
+                                <div class="stars">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text">I absolutely loved my visit! The pizza was perfectly cooked with a
+                             crispy crust and generous toppings. The service was quick, and the staff were
+                              so friendly. It’s great to find a place that combines delicious food with a 
+                              welcoming atmosphere. I’ll definitely be coming back!</div>
+
+                    </div>
+                    <div class="swiper-slide box">
+                        <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                        <div class="top">
+                            <img src="images/reveiwer2.jpg" alt="">
+                            <div class="right">
+                                <div class="name"><span>Tom Stepher</span> <br> <small>Verfied Customer</small></div>
+                                <div class="stars">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text">What a fantastic spot for a quick bite!
+                             The burgers are juicy and full of flavor, and the fries 
+                             are crispy and seasoned just right. The prices are 
+                             reasonable, and the portions are generous. Perfect 
+                             for a family meal or a casual outing with friends!</div>
+
+                    </div>
+                    <div class="swiper-slide box">
+                        <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                        <div class="top">
+                            <img src="images/reveiwer5.jpg" alt="">
+                            <div class="right">
+                                <div class="name"><span>Mia Patal</span> <br> <small>Verfied Customer</small></div>
+                                <div class="stars">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text">This place is a gem! The atmosphere is 
+                            lively and fun, making it a perfect spot for family outings. 
+                            The kids loved the pizza, and I enjoyed the delicious salads.
+                             The staff went out of their way to make sure we had everything 
+                             we needed. Will be returning soon!</div>
+
+                    </div>
+                    <div class="swiper-slide box">
+                        <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                        <div class="top">
+                            <img src="images/reveiwer3.jpg" alt="">
+                            <div class="right">
+                                <div class="name"><span>Tom Stepher</span> <br> <small>Verfied Customer</small></div>
+                                <div class="stars">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text">I ordered takeout from here, and it exceeded my 
+                            expectations! The delivery was fast, and everything arrived hot and fresh. 
+                            The variety on the menu is impressive, and I was particularly impressed 
+                            with the quality of the ingredients. Highly recommend!</div>
+
+                    </div>
+                    <div class="swiper-slide box">
+                        <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                        <div class="top">
+                            <img src="images/reveiwer6.jpg" alt="">
+                            <div class="right">
+                                <div class="name"><span>Sopia Devis</span> <br> <small>Verfied Customer</small></div>
+                                <div class="stars">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text">I had a fantastic meal here! The variety of pizzas is incredible, 
+                            and each one is loaded with fresh toppings. The crust was perfectly chewy, 
+                            just the way I like it. The staff were super helpful in recommending their 
+                            favorites, and I can’t thank them enough for the great service. Can’t wait to return!</div>
+
+                    </div>
+                    <div class="swiper-slide box">
+                        <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                        <div class="top">
+                            <img src="images/reveiwer7.jpg" alt="">
+                            <div class="right">
+                                <div class="name"><span>Emily Anderson</span> <br> <small>Verfied Customer</small></div>
+                                <div class="stars">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text">This fast-food spot has quickly become my go-to! 
+                            The quality of the food is outstanding, especially for a fast-food place. 
+                            I tried their new spicy chicken sandwich, and it was delicious—perfectly 
+                            crispy and packed with flavor. The ambiance is relaxed, making it a great place to unwind. Highly recommend!</div>
+
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- contact -->
+        <section class="contact" id="contact">
+            <h1><span>Contact</span> Us</h1>
+            <form action="#" novalidate class="box-container" id="contact-form">
+                <div class="row">
+                    <div class="input-box">
+                        <label for="fname">Your First Name</label><br>
+                        <input type="text" id="fname"
+                            oninput="this.parentElement.querySelector('small').textContent = ''">
+                        <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    </div>
+                    <div class="input-box">
+                        <label for="lname">Your Last Name</label><br>
+                        <input type="text" id="lname"
+                            oninput="this.parentElement.querySelector('small').textContent = ''">
+                        <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-box">
+                        <label for="email">Your Email</label><br>
+                        <input type="email" id="email"
+                            oninput="this.parentElement.querySelector('small').textContent = ''">
+                        <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    </div>
+                    <div class="input-box">
+                        <label for="phone">Your Contact Number</label><br>
+                        <input type="tel" id="phone"
+                            oninput="this.parentElement.querySelector('small').textContent = ''">
+                        <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-box">
+                        <label for="message">Your Message</label><br>
+                        <textarea name="" id="message" cols="30" rows="10"
+                            oninput="this.parentElement.querySelector('small').textContent = ''"></textarea>
+                        <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Send">
+                </div>
+            </form>
+        </section>
+
+        <!-- footer -->
+        <section class="footer">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>Useful links</h4>
+                    <ul class="links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Customer Agreement</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Variety</h4>
+                    <ul class="links">
+                        <li><a href="#">Pizza</a></li>
+                        <li><a href="#">Non Veg</a></li>
+                        <li><a href="#">Burger</a></li>
+                        <li><a href="#">Soft Drink</a></li>
+                        <li><a href="#">Veg Pizza</a></li>
+                   
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Opening Hours</h4>
+                    <ul class="links">
+                        <li><a href="#">Mon-Sat : 9.00 AM to 9.30 PM</a></li>
+                        <li><a href="#">Sunday : 9.00 AM to 3.00 PM</a></li>
+                    </ul>
+                    <h4 style="margin-top: 15px;">Locations</h4>
+                    <ul class="links">
+                        <li class="address1"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Dehradun</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Need Help?</h4>
+                    <ul class="links">
+                        <li><a href="" class="social"><i class="fa-solid fa-phone"></i> +91 9999999999/a></li>
+                        <li><a href="" class="social"><i class="fa-solid fa-phone"></i> +91 9999999999</a></li>
+                        <li><a href="" class="social"><i class="fa-solid fa-envelope"></i> email@gmail.com</a></li>
+                    </ul>
+                    <h4 style="margin-top: 15px;">Follow Us</h4>
+                    <ul class="links">
+                        <li><a href="#" class="social"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="#" class="social"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                        <li><a href="#" class="social"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>
+                        Subscribe to our newsletter for a weekly dose
+                        of news, updates, helpful tips, and
+                        exclusive offers.
+                    </p>
+                    <form action="#">
+                        <input type="text" placeholder="Your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- copyright -->
+        <div class="copyright">
+            &copy; | @2024 by <span>Satyam Kathait</span> | All Rights Deserved
+        </div>
+
+    </div>
+
+    <script src="script/swiper-bundle.min.js"></script>
+    <script src="script/reviews.js"></script>
+    <script src="script/form.js"></script>
+    <script type="module" src="script/products.js"></script>
+    <script type="module" src="script/nav.js"></script>
+    <script type="module" src="script/cart.js"></script>
+</body>
+
+</html>
